@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Frases Motivacionais</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Frases Motivacionais</h1>
+    <select id="categoria">
+      <option value="trabalho">Trabalho</option>
+      <option value="amor">Amor</option>
+      <option value="superacao">Superação</option>
+      <option value="autoconhecimento">Autoconhecimento</option>
+      <option value="gratidao">Gratidão</option>
+      <option value="sucesso">Sucesso</option>
+      <option value="Deus">Deus</option>
+    </select>
+    <button id="gerarFrase">Gerar Frase</button>
+    <div id="fraseContainer" class="frase-container">
+      <p id="fraseTexto">Clique em "Gerar Frase" para começar!</p>
+    </div>
+    <div id="shareButtons" class="share-buttons" style="display: none;">
+      <button id="shareX" class="share-button share-x"><img src="imagens/icons/x.png" alt="X"></button>
+      <button id="shareFacebook" class="share-button share-facebook"><img src="imagens/icons/facebook.png" alt="Facebook"></button>
+      <button id="shareInstagram" class="share-button share-instagram"><img src="imagens/icons/instagram.png" alt="Instagram"></button>
+      <button id="shareLinkedIn" class="share-button share-linkedin"><img src="imagens/icons/linkedin.png" alt="LinkedIn"></button>
+    </div>
+  </div>
+  <footer class="footer">
+    <p id="contador">Frases geradas: 0</p>
+    <p>Powered by <a href="https://www.linkedin.com/in/danilo-pentest/" target="_blank" rel="noopener noreferrer">Danilo Barreto</a></p>
+  </footer>
+  <script src="frases.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+select, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.frase-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Ajustado para proporção 3:2 */
+  aspect-ratio: 3 / 2; /* Proporção paisagem (1280x853px) */
+  margin: 20px auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Alinha o texto na parte inferior */
+  padding-bottom: 20px; /* Margem inferior para o texto */
+}
+
+#fraseTexto {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif; /* Fonte estilizada */
+  text-align: center;
+  padding: 10px;
+  max-width: 80%;
+  line-height: 1.4;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Sombra para legibilidade */
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 50%; /* Botões redondos */
+  cursor: pointer;
+  background: none; /* Remove fundo padrão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.share-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.share-button:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #666;
+  width: 100%; /* Garante que o footer ocupe toda a largura */
+  background-color: #e0e0e0; /* Fundo leve para destacar o rodapé */
+  margin-top: auto; /* Empurra o footer para o final da página */
+}
+
+.footer a {
+  color: #0077b5; /* Cor do LinkedIn */
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .frase-container {
+    max-width: 100%;
+    aspect-ratio: 3 / 2; /* Mantém proporção em celulares */
+  }
+
+  #fraseTexto {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .share-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
