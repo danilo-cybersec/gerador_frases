@@ -109,7 +109,7 @@ const imagens = {
     'imagens/autoconhecimento/autoconhecimento13.jpg',
     'imagens/autoconhecimento/autoconhecimento14.jpg',
     'imagens/autoconhecimento/autoconhecimento15.jpg',
-    'imagens/autoconhecimento/autoconhecimento16.jpg',
+    'imagens/autoconhecimento/autoconhecimento16.png',
     'imagens/autoconhecimento/autoconhecimento17.jpg'
   ],
   gratidao: [
