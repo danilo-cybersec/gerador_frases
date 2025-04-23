@@ -167,12 +167,12 @@ const contadorElement = document.getElementById('contador');
 
 // Função para buscar o número de visitantes únicos via Google Analytics Data API
 async function fetchVisitorCount() {
-  const API_KEY = 'SUA_CHAVE_DE_API'; // Substitua por sua chave de API do Google Cloud
-  const PROPERTY_ID = 'SUA_PROPERTY_ID'; // Substitua pelo ID da propriedade do Google Analytics (ex.: 'properties/123456789')
+  const API_KEY = 'AIzaSyC43Mng3i8SXeoRWuK7me2o-Kpbu5ZnRvA'; // Substitua por sua chave de API do Google Cloud
+  const PROPERTY_ID = '486666755'; // Substitua pelo ID da propriedade do Google Analytics (ex.: 'properties/123456789')
 
   try {
     const response = await fetch(
-      `https://analyticsdata.googleapis.com/v1beta/${486666755}:runReport?key=${AIzaSyC43Mng3i8SXeoRWuK7me2o-Kpbu5ZnRvA}`,
+      `https://analyticsdata.googleapis.com/v1beta/${PROPERTY_ID}:runReport?key=${API_KEY}`,
       {
         method: 'POST',
         headers: {
