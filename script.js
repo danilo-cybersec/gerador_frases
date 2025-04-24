@@ -375,9 +375,8 @@ function shareOnX() {
       alert('Erro ao gerar a imagem para compartilhamento.');
       return;
     }
-    const text = encodeURIComponent(frase);
-    const url = encodeURIComponent(window.location.href);
-    const shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+    const text = encodeURIComponent(frase + " " + window.location.href); // Inclui a URL no texto
+    const shareUrl = `https://x.com/intent/tweet?text=${text}`;
     window.open(shareUrl, '_blank');
   });
 }
@@ -391,7 +390,8 @@ function shareOnFacebook() {
       return;
     }
     const url = encodeURIComponent(window.location.href);
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}"e=${encodeURIComponent(frase)}`;
+    const quote = encodeURIComponent(frase);
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`;
     window.open(shareUrl, '_blank');
   });
 }
@@ -428,12 +428,13 @@ function shareOnLinkedIn() {
       return;
     }
     const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent('Frase Motivacional');
+    const title = encodeURIComponent('Frase Motivacional - DizPraMim');
     const summary = encodeURIComponent(frase);
     const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`;
     window.open(shareUrl, '_blank');
   });
 }
+
 
 gerarFraseBtn.addEventListener('click', gerarFrase);
 shareXBtn.addEventListener('click', shareOnX);
