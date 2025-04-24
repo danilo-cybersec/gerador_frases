@@ -163,44 +163,7 @@ const shareXBtn = document.getElementById('shareX');
 const shareFacebookBtn = document.getElementById('shareFacebook');
 const shareInstagramBtn = document.getElementById('shareInstagram');
 const shareLinkedInBtn = document.getElementById('shareLinkedIn');
-const contadorElement = document.getElementById('contador');
 
-// Função para buscar o número de visitantes únicos via Google Analytics Data API
-async function fetchVisitorCount() {
-  const API_KEY = 'AIzaSyC43Mng3i8SXeoRWuK7me2o-Kpbu5ZnRvA'; // Substitua por sua chave de API do Google Cloud
-  const PROPERTY_ID = '486666755'; // Substitua pelo ID da propriedade do Google Analytics (ex.: 'properties/123456789')
-
-  try {
-    const response = await fetch(
-      `https://analyticsdata.googleapis.com/v1beta/${PROPERTY_ID}:runReport?key=${API_KEY}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          dateRanges: [{ startDate: '2025-01-01', endDate: 'today' }], // Período desde o início do ano até hoje
-          metrics: [{ name: 'activeUsers' }], // Métrica para visitantes únicos
-        }),
-      }
-    );
-    const data = await response.json();
-    if (data.rows && data.rows.length > 0) {
-      const visitorCount = data.rows[0].metricValues[0].value;
-      contadorElement.textContent = `Visitantes: ${visitorCount}`;
-    } else {
-      contadorElement.textContent = 'Visitantes: 0';
-    }
-  } catch (error) {
-    console.error('Erro ao buscar o número de visitantes:', error);
-    contadorElement.textContent = 'Visitantes: Erro';
-  }
-}
-
-// Chama a função para buscar o número de visitantes quando a página carrega
-document.addEventListener('DOMContentLoaded', () => {
-  fetchVisitorCount();
-});
 
 function getRandomItem(array) {
   return array[Math.floor(Math.random() * array.length)];
